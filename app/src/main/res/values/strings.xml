@@ -4,4 +4,19 @@
     <string name="panjang">Panjang</string>
     <string name="result">Hasil</string>
     <string name="tinggi">Tinggi</string>
+    <string name="pindah_activity">Pindah Activity</string>
+    <string name="pindah_activity_dengan_data">Pindah Activity Dengan Data</string>
+    <string name="pindah_activity_dengan_object">Pindah Activity Dengan Object</string>
+    <string name="dial_a_number">dial a number</string>
+    <string name="pindah_untuk_result">Pindah Untuk Result</string>
+    <string name="hasil_intent">Hasil Intent</string>
+    <string name="kalkulasi">Kalkulasi</string>
+    <string name="intent">Intent</string>
+    <string name="ini_halaman_move_activity">Ini Halaman Move Activity</string>
+    <string name="choose_number">Pilih Angka</string>
+    <string name="_50">50</string>
+    <string name="_21">21</string>
+    <string name="_10">10</string>
+    <string name="_500">500</string>
+    <string name="choose">Pilih</string>
 </resources>
