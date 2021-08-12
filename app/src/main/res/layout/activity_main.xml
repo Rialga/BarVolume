@@ -11,9 +11,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
         android:layout_marginTop="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -79,48 +79,54 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#9C27B0"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:background="#9C27B0" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginTop="30dp"
+            android:gravity="center"
             android:text="@string/intent"
             android:textColor="#03A9F4"
             android:textSize="30sp"
             android:textStyle="bold" />
+
         <Button
             android:id="@+id/btn_pindah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/pindah_activity" />
+
         <Button
             android:id="@+id/btn_pindah_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/pindah_activity_dengan_data" />
+
         <Button
             android:id="@+id/btn_pindah_object"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/pindah_activity_dengan_object" />
+
         <Button
             android:id="@+id/btn_dial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/dial_a_number" />
+
         <Button
             android:id="@+id/btn_pindah_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/pindah_untuk_result" />
+
         <TextView
             android:id="@+id/tv_result_intent"
             android:layout_width="match_parent"
@@ -130,6 +136,28 @@
             android:textColor="#0E8F05"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:background="#9C27B0" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/fragment"
+            android:textColor="#03A9F4"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_page" />
 
     </LinearLayout>
 </ScrollView>

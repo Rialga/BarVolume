@@ -1,5 +1,6 @@
 package com.example.barvolume
 
+import android.R.attr
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+
+import android.R.attr.data
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -25,6 +30,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var dialBtn: Button
     private lateinit var resultBtn: Button
     private lateinit var intentHasilTv: TextView
+
+    //Fragment
+    private  lateinit var btnFragment : Button
 
 
     companion object {
@@ -59,6 +67,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         dialBtn.setOnClickListener(this)
         resultBtn.setOnClickListener(this)
 
+        //fragment
+        btnFragment = findViewById(R.id.btn_fragment)
+        btnFragment.setOnClickListener(this)
+
         if (savedInstanceState != null) {
             val result = savedInstanceState.getString(STATE_RESULT)
             hasilTv.text = result
@@ -87,15 +99,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.btn_pindah -> {
-                val moveIntent = Intent(this@MainActivity , MoveActivity::class.java)
+                val moveIntent = Intent(this@MainActivity, MoveActivity::class.java)
                 startActivity(moveIntent)
             }
+
             R.id.btn_pindah_data -> {
                 val moveWithDataIntent = Intent(this@MainActivity, MoveActivityData::class.java)
                 moveWithDataIntent.putExtra(MoveActivityData.EXTRA_NAME, "Rialga Corp")
                 moveWithDataIntent.putExtra(MoveActivityData.EXTRA_AGE, 23)
                 startActivity(moveWithDataIntent)
             }
+
             R.id.btn_pindah_object -> {
                 val person = Person(
                     "DicodingAcademy",
@@ -103,18 +117,32 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     "academy@dicoding.com",
                     "Bandung"
                 )
-                val moveWithObjectIntent = Intent(this@MainActivity, MainActivityMoveObject::class.java)
+                val moveWithObjectIntent =
+                    Intent(this@MainActivity, MainActivityMoveObject::class.java)
                 moveWithObjectIntent.putExtra(MainActivityMoveObject.EXTRA_PERSON, person)
                 startActivity(moveWithObjectIntent)
             }
+
             R.id.btn_dial -> {
                 val phoneNumber = "081210841382"
                 val dialPhoneIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phoneNumber"))
                 startActivity(dialPhoneIntent)
             }
+
             R.id.btn_pindah_result -> {
-                val moveForResultIntent = Intent(this@MainActivity, MainActivityMoveResult::class.java)
+                val moveForResultIntent =
+                    Intent(this@MainActivity, MainActivityMoveResult::class.java)
                 startActivityForResult(moveForResultIntent, REQUEST_CODE)
+            }
+
+            R.id.btn_fragment -> {
+//                Toast.makeText(
+//                    this@MainActivity, "Yo!",
+//                    Toast.LENGTH_LONG
+//                ).show()
+
+                val moveToFragmentPage = Intent(this@MainActivity, FragmentActivity::class.java)
+                startActivity(moveToFragmentPage)
             }
         }
     }
@@ -123,11 +151,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE) {
             if (resultCode == MainActivityMoveResult.RESULT_CODE) {
-                val selectedValue = data?.getIntExtra(MainActivityMoveResult.EXTRA_SELECTED_VALUE, 0)
+                val selectedValue =
+                    data?.getIntExtra(MainActivityMoveResult.EXTRA_SELECTED_VALUE, 0)
                 intentHasilTv.text = "Hasil : $selectedValue"
             }
         }
     }
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(STATE_RESULT, hasilTv.text.toString())

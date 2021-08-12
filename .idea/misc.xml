@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/BarVolume/app/src/main/res/layout/activity_fragment.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/BarVolume/app/src/main/res/layout/activity_main.xml" value="0.17481884057971014" />
         <entry key="..\:/AndroidStudioProjects/BarVolume/app/src/main/res/layout/activity_main_move_object.xml" value="0.1933876811594203" />
         <entry key="..\:/AndroidStudioProjects/BarVolume/app/src/main/res/layout/activity_main_move_result.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/BarVolume/app/src/main/res/layout/activity_main_object.xml" value="0.1933876811594203" />
         <entry key="..\:/AndroidStudioProjects/BarVolume/app/src/main/res/layout/activity_move.xml" value="0.17481884057971014" />
+        <entry key="..\:/AndroidStudioProjects/BarVolume/app/src/main/res/layout/fragment_home.xml" value="0.25" />
       </map>
     </option>
   </component>
