@@ -2,23 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".CategoryFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_home_fragment"
+        android:text="@string/ini_halaman_katetori"
         android:layout_marginTop="16dp"/>
 
     <Button
-        android:id="@+id/btn_category"
+        android:id="@+id/btn_detail_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/kategori"
+        android:text="@string/ke_fragment_lifestyle"
         android:layout_marginTop="16dp"/>
 
 </LinearLayout>
